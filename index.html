@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proyecto Corte 2</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/css/styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  </head>
+  <body id="body">
+    <div>
+      <div class="row">
+        <div class="row justify-content-center">
+          <h1 class="martop-30 col-md-11">REGISTRO DE COCHES</h1>
+        </div>
+        <form class="row col-md-12 justify-content-evenly" action="#">
+          <div class="col-md-5 martop-60">
+            <legend>Vehiculo</legend>
+            <div class="row justify-content-center">
+              <div class="col-md-4 ">
+                <label for="Clase">Clase</label>
+                <select name="claseVehiculo" id="claseVehiculo" class="form-select" required>
+                  <option value="" selected>Seleccione</option>
+                  <option value="Automovil">Automovil</option>
+                  <option value="Motocicleta">Motocicleta</option>
+                </select>
+              </div>
+              <div class="col-md-4 ">
+                <label for="Placa">Placa</label>
+                <input type="text" maxlength="6" minlength="6" class="form-control" id="placaVehiculo" required>
+              </div>
+              <div class="col-md-4 ">
+                <label for="Marca">Marca</label>
+                <select name="Marcas" id="marcaVehiculo" class="form-select" required>
+                  
+                </select>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-4 martop-30">
+                <label for="Modelo">Modelo</label>
+                <select name="Años" id="modeloVehiculo" class="form-select">
+                </select>
+              </div>
+              <div class="col-md-4 martop-30">
+                <label for="Pasajeros">Cant Pasajeros</label>
+                <select name="pasajeros" id="pasajerosVehiculo" class="form-select"></select>
+              </div>
+              <div class="col-md-4 martop-30">
+                <label for="Color">Color</label>
+                <select name="colores" id="colorVehiculo" class="form-select"></select>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-5">
+            <legend>Titular</legend>
+            <div class="row justify-content-center">
+              <div class="col-md-4">
+                <label for="tipoDocumento">Tipo Documento</label>
+                <select name="tipoDocumento" id="tipoDocumento" class="form-select">
+                  <option value="CC">CC</option>
+                  <option value="CE">CE</option>
+                  <option value="Pasaporte">Pasaporte</option>
+                </select>
+              </div>
+              <div class="col-md-4">
+                <label for="numeroDocumento">Numero Documento</label>
+                <input type="text" pattern="[0-9]{1,10}" class="form-control" id="numeroDocumento" placeholder="Eje: 1234567890" required>
+              </div>
+              <div class="col-md-4">
+                <label for="ciudadExpedicion">Departamento</label>
+                <select name="ciudades" id="ciudades" class="form-select" required>
+                  <option value="Amazonas">Amazonas</option>
+                  <option value="Antioquia">Antioquia</option>
+                  <option value="Arauca">Arauca</option>
+                  <option value="Atlántico">Atlántico</option>
+                  <option value="Bogotá, D. C.">Bogotá, D. C.</option>
+                  <option value="Bolívar">Bolívar</option>
+                  <option value="Boyacá">Boyacá</option>
+                  <option value="Caldas">Caldas</option>
+                  <option value="Caquetá">Caquetá</option>
+                  <option value="Casanare">Casanare</option>
+                  <option value="Cauca">Cauca</option>
+                  <option value="Cesar">Cesar</option>
+                  <option value="Chocó">Chocó</option>
+                  <option value="Córdoba">Córdoba</option>
+                  <option value="Cundinamarca">Cundinamarca</option>
+                  <option value="Guainía">Guainía</option>
+                  <option value="Guaviare">Guaviare</option>
+                  <option value="Huila">Huila</option>
+                  <option value="La Guajira">La Guajira</option>
+                  <option value="Magdalena">Magdalena</option>
+                  <option value="Meta">Meta</option>
+                  <option value="Nariño">Nariño</option>
+                  <option value="Norte de Santander">Norte de Santander</option>
+                  <option value="Putumayo">Putumayo</option>
+                  <option value="Quindío">Quindío</option>
+                  <option value="Risaralda">Risaralda</option>
+                  <option value="San Andrés y Providencia">San Andrés y Providencia</option>
+                  <option value="Santander">Santander</option>
+                  <option value="Sucre">Sucre</option>
+                  <option value="Tolima">Tolima</option>
+                  <option value="Valle del Cauca">Valle del Cauca</option>
+                  <option value="Vaupés">Vaupés</option>
+                  <option value="Vichada">Vichada</option>
+                </select>
+              </div>
+            </div>
+            <div class="row justify-content-center">
+              <div class="row col-md-12">
+                <label for="nombres" class="martop-30">Nombres</label>
+                <div class="col-md-6">
+                  <input type="text" class="form-control" pattern="[a-zA-Z]" id="primerNombre" required>
+                </div>
+                <div class="col-md-6">
+                  <input type="text" class="form-control" pattern="[a-zA-Z]" id="segundoNombre" placeholder="Opcional">
+                </div>
+              </div>
+              <div class="row col-md-12">
+                <label for="Apellidos" class="martop-30">Apellidos</label>
+                <div class="col-md-6">
+                  <input type="text" class="form-control" pattern="[a-zA-Z]" id="primerApellido" required>
+                </div>
+                <div class="col-md-6">
+                  <input type="text" class="form-control" pattern="[a-zA-Z]" id="segundoApellido" placeholder="Opcional">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-center martop-30"  id="botonRegistro">
+            <button class=" btn btn-danger col-md-10">Registrar</button>
+          </div>
+          <div class="row justify-content-center martop-30" id="botonActualizar">
+            <button class=" btn btn-danger col-md-10">Actualizar</button>
+          </div>
+        </form>
+      </div>
+      <div class="row formatos-inputs">
+        <h5><br><b>FORMATOS</b></h5>
+        <p>
+          - <b>PLACA :</b>
+          <span> Si es carro ( tiene 3 numeros y 3 letras <b>Ejemplo: LMH348</b> )</span>  
+          <span> Si es moto ( tiene 3 letras iniciales, 2 numeros y 1 letra final <b>Ejemplo: QJU01G</b> )</span>  
+          <br>
+          - <b>PASAJEROS :</b>
+          <span>La cantidad de pasajeros es de minimo 2 maximo 5</span>
+          <br>
+          - <b>NUMERO DOCUMENTO :</b>
+          <span> Si es cedula de ciudadania o cedula de extrangeria (CC o CE) son solo numeros y de 1 hasta 10 digitos</span>
+          <span> Si es pasaporte recuerda son 2 letras y 6 numeros (<b>Ejemplo: PE123456</b>)</span>
+          <br>
+          - <b>NOMBRES Y APELLIDOS :</b>
+          <span> Nombres y apellidos solo letras no numeros</span>
+        </p>
+        <p></p>
+      </div>
+      <div class="row justify-content-center">
+        <div class="row justify-content-center">
+          <h1 class="col-md-11">Lista de coches registrados</h1>
+        </div>
+        <div class="col-md-11">
+          <table class="table table-striped table-dark">
+            <thead>
+              <tr>
+                <th scope="col">Placa</th>
+                <th scope="col">Marca</th>
+                <th scope="col">Modelo</th>
+                <th scope="col">N Pasajeros</th>
+                <th scope="col">Color</th>
+                <th scope="col">Clase</th>
+                <th scope="col">Documento</th>
+                <th scope="col">Numero</th>
+                <th scope="col">Nombres</th>
+                <th scope="col">Apellidos</th>
+                <th scope="col" colspan="2">Edit</th>
+              </tr>
+            </thead>
+            <tbody id="bodyTabla">
+            </tbody>
+          </table>
+        </div>
+        
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script src="src/js/index.js"></script>
+  </body>
+</html>
